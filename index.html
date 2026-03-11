@@ -7,5 +7,88 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        height="30px"
+        src="images/logo.svg"
+        alt="companies' logo">
+    </header>
+    <main class="login">
+      <div class="login__head">
+        <div class="login__head-title">
+          <img
+            src="images/log-in.svg"
+            alt="login icon">
+          <h1 class="login__title-text">Login</h1>
+        </div>
+        <p class="login__head-desc">Insert your information below.</p>
+      </div>
+
+      <form class="form">
+        <div class="form__input-item">
+
+          <label for="email">E-mail</label>
+          <div class="form__input-row">
+            <img
+              height="16px"
+              class="form__input-left-icon"
+              id="email-left-icon"
+              src="images/mail.svg"
+              alt="mail icon">
+            <input
+              id="email"
+              type="email"
+              class="form__input-text"
+              placeholder="Type your email"
+              required >
+          </div>
+        </div>
+
+        <div class="form__input-item">
+          <label for="password">Password</label>
+          <div class="form__input-row">
+            <img
+              height="16px"
+              class="form__input-left-icon"
+              id="password-left-icon"
+              src="images/lock.svg"
+              alt="lock icon">
+            <img
+              height="16px"
+              class="form__input-right-icon"
+              src="images/eye.svg"
+              alt="switch password visibility">
+            <input
+              id="password"
+              type="password"
+              class="form__input-text"
+              placeholder="Type your password"
+              required>
+          </div>
+        </div>
+
+        <div class="form__wrap">
+          <div class="form__checkbox-item">
+            <label class="form__checkbox-label">
+              <input
+                type="checkbox"
+                class="form__input-checkbox">
+              <span class="form__checkbox-mark"></span>
+              Remind me
+            </label>
+          </div>
+          <a href="#" class="form__forgot-link">Forgot my password</a>
+        </div>
+
+        <button class="form__button">LOGIN</button>
+      </form>
+      <p class="form__footer-text">
+        Dont't have an account?
+        <a href="#" class="form__footer-link">Sign up!</a>
+      </p>
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>

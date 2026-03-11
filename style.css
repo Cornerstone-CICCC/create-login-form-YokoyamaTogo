@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-base);
+  font-family: Poppins;
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+}
+
+.login {
+  padding: 0 20px;
+}
+
+.login__head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-bottom: 30px;
+}
+
+.login__head-title {
+  display: flex;
+  gap: 20px;
+}
+
+.login__title-text {
+  color: var(--text-title);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__input-row {
+  position: relative;
+  width: 100%;
+}
+
+.form__input-left-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.form__input-right-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.form__input-text {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+
+  border: 2px solid var(--text-base);
+  border-radius: 6px;
+  background-color: var(--background);
+
+  color: var(--text-base);
+}
+
+.form__input-text:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.form__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__checkbox-item {
+  display: flex;
+}
+
+.form__input-checkbox {
+  accent-color: var(--background);
+}
+
+.form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form__checkbox-label input {
+  display: none;
+}
+
+.form__checkbox-mark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid var(--text-base);
+  border-radius: 4px;
+  background: var(--background);
+}
+
+.form__checkbox-label input:checked + .form__checkbox-mark {
+  background: var(--primary-color);
+}
+
+.form__checkbox-mark::after {
+  position: absolute;
+  content: "";
+  display: none;
+
+  top: 2px;
+  left: 6px;
+
+  width: 5px;
+  height: 10px;
+
+  border: 1px solid var(--background);
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+
+.form__checkbox-label input:checked + .form__checkbox-mark::after {
+  display: block;
+}
+
+.form__forgot-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.form__forgot-link:hover {
+  text-decoration: underline;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  background-color: var(--primary-color);
+
+  color: black;
+}
+
+.form__footer-text {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.form__footer-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.form__footer-link:hover {
+  text-decoration: underline;
+}
