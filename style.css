@@ -18,6 +18,7 @@ body {
   background-color: var(--background);
   color: var(--text-base);
   font-family: Poppins;
+  min-height: 100vh;
 }
 
 .header {
@@ -187,4 +188,40 @@ body {
 
 .form__footer-link:hover {
   text-decoration: underline;
+}
+
+.login__side-image {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: minmax(600px, 1fr) 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .header {
+    grid-column: 1;
+  }
+
+  .login {
+    grid-column: 1;
+  }
+
+  .login {
+    align-self: start;
+    margin: 60px;
+    padding: 40px 80px;
+    background-color: var(--form-background);
+  }
+
+  .login__side-image {
+    display: block;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+  }
 }
